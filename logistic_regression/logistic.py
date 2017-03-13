@@ -16,7 +16,8 @@ class LogisticRegression:
     max_iter : int, default 10000
         Maximum number of iterations.
 
-    solver : {'gradient_descent', 'newton_method'}, default: 'newton_method'
+    solver : {'gradient_descent', 'newton_method',
+              'stochastic_gradient_descent'}, default: 'newton_method'
         Algorithm to use in the optimization problem.
 
     tol : float, default: 1e-4
@@ -77,6 +78,17 @@ class LogisticRegression:
 
                 # theta = theta - alpha * gradient
                 self.theta -= self.learning_rate * grad
+
+        elif self.solver == "stochastic_gradient_descent":
+            for itr in range(self.max_iter):
+                order = np.random.permutation(range(n_samples))
+                for index in order:
+                    data = X[index, :]
+                    label = y[index]
+                    margins = label * data.dot(self.theta)
+                    probs = 1 / (1 + np.exp(-margins))
+                    self.theta -= \
+                        - self.learning_rate * (1 - probs) * label * data
 
         elif self.solver == "newton_method":
             for itr in range(self.max_iter):
