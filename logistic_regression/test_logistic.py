@@ -3,7 +3,9 @@ from logistic import LogisticRegression
 
 
 def test_lr_classifier():
-    # read test data
+    # data from:
+    # http://cs229.stanford.edu/ps/ps1/logistic_x.txt
+    # http://cs229.stanford.edu/ps/ps1/logistic_y.txt
     try:
         X = np.loadtxt('logistic_x.txt')
     except FileNotFoundError:
