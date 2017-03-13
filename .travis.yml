@@ -10,7 +10,3 @@ install:
 
 before_script:
     - flake8 ./
-
-script:
-    - py.test ./ --doctest-modules
-
