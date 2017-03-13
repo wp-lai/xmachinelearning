@@ -7,7 +7,10 @@ from numpy.linalg import inv
 
 class LogisticRegression:
     """Logistic Regression classifier
-Parameters ---------- learning_rate : float, default 0.01
+
+    Parameters
+    ----------
+    learning_rate : float, default 0.01
         learning rate for gradient descent.
 
     max_iter : int, default 10000
@@ -21,8 +24,8 @@ Parameters ---------- learning_rate : float, default 0.01
         stop when ``max{|g_i | i = 1, ..., n} <= tol``
         where ``g_i`` is the i-th component of the gradient.
 
-    Attributes:
-    -----------
+    Attributes
+    ----------
     coef_ : array, shape (n_features, )
         Coefficient of the features in the decision function.
 
@@ -43,8 +46,8 @@ Parameters ---------- learning_rate : float, default 0.01
     def fit(self, X, y):
         """Fit the model according to the given training data.
 
-        Parameters:
-        -----------
+        Parameters
+        ----------
         X : array, shape (n_samples, n_features)
             Training vector, where n_samples is the number of samples and
             n_features is the number of features.
@@ -53,8 +56,8 @@ Parameters ---------- learning_rate : float, default 0.01
             Target vector relative to X. Positive target encoded to 1 and
             negative target encoded to -1.
 
-        Returns:
-        --------
+        Returns
+        -------
         self : object
             return self.
         """
@@ -103,12 +106,12 @@ Parameters ---------- learning_rate : float, default 0.01
     def predict_proba(self, X):
         """Probability estimates
 
-        Parameters:
-        -----------
+        Parameters
+        ----------
         X : array, shape (n_samples, n_features)
 
-        Returns:
-        --------
+        Returns
+        -------
         T : array, shape (n_samples, 2)
             Return of probability of the sample for positive target and
             negative target in the model.
@@ -122,29 +125,14 @@ Parameters ---------- learning_rate : float, default 0.01
     def predict(self, X):
         """Predicted label
 
-        Parameters:
-        -----------
+        Parameters
+        ----------
         X : array, shape (n_samples, n_features)
 
-        Returns:
-        --------
+        Returns
+        -------
         T : array, shape (n_samples, )
             Return the label prediction for the sample.
         """
         probs = self.predict_proba(X)
         return np.where(probs[:, 0] > probs[:, 1], 1, -1)
-
-
-if __name__ == "__main__":
-    # read test data
-    X = np.loadtxt('logistic_x.txt')
-    y = np.loadtxt('logistic_y.txt')
-
-    lr_clf = LogisticRegression()
-    lr_clf.fit(X, y)
-
-    # -2.618
-    print("The estimated intercept is ", lr_clf.intercept_)
-
-    # [0.760  1.170]
-    print("The estimated coefficients are ", lr_clf.coef_)
