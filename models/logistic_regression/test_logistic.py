@@ -9,12 +9,12 @@ def read_data():
     try:
         X = np.loadtxt('logistic_x.txt')
     except FileNotFoundError:
-        X = np.loadtxt('logistic_regression/logistic_x.txt')
+        X = np.loadtxt('datas/binary_classification/logistic_x.txt')
 
     try:
         y = np.loadtxt('logistic_y.txt')
     except FileNotFoundError:
-        y = np.loadtxt('logistic_regression/logistic_y.txt')
+        y = np.loadtxt('datas/binary_classification/logistic_y.txt')
 
     return (X, y)
 
