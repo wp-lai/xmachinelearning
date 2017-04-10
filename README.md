@@ -4,7 +4,7 @@
 Exercises for Machine Learning
 
 
-## Algorithm Implementation
+## models
 + [Logistic Regression](logistic_regression/)
 
 ## Utilities
