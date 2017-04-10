@@ -6,3 +6,6 @@ Exercises for Machine Learning
 
 ## Algorithm Implementation
 + [Logistic Regression](logistic_regression/)
+
+## Utilities
++ [One Hot Encoding](utilities/onehot.py)
