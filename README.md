@@ -8,4 +8,5 @@ Exercises for Machine Learning
 
 ## Utilities
 + [One Hot Encoding](utilities/onehot.py)
++ [Argmin](utilities/argmin.py)
 + [Distance](utilities/distance.py)
