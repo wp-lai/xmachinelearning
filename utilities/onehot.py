@@ -28,4 +28,3 @@ def one_hot_encoding(array):
     I = np.eye(n_value)
     out = I[array, ]
     return out
-
