@@ -3,9 +3,9 @@
 
 Exercises for Machine Learning
 
-
-## models
+## Models
 + [Logistic Regression](logistic_regression/)
 
 ## Utilities
 + [One Hot Encoding](utilities/onehot.py)
++ [Distance](utilities/distance.py)
