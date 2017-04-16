@@ -10,3 +10,4 @@ Exercises for Machine Learning
 + [One Hot Encoding](utilities/onehot.py)
 + [Argmin](utilities/argmin.py)
 + [Distance](utilities/distance.py)
++ [Cached Property Decorator](utilities/cached_property.py)
