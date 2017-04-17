@@ -2,7 +2,7 @@
 A decorator for caching properties in classes.
 
 Examples:
-    >>> class Foo:
+    >>> class Foo(object):
     ...     @cached_property
     ...     def bar(self):
     ...         print("This message only print once")
@@ -20,9 +20,9 @@ def cached_property(func):
 
     @property
     @functools.wraps(func)
-    def decorator(self):
+    def decorator(self, *args, **kwargs):
         if not hasattr(self, attr):
-            setattr(self, attr, func(self))
+            setattr(self, attr, func(self, *args, **kwargs))
         return getattr(self, attr)
 
     return decorator
