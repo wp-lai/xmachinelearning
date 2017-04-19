@@ -11,3 +11,8 @@ Exercises for Machine Learning
 + [Argmin](utilities/argmin.py)
 + [Distance](utilities/distance.py)
 + [Cached Property Decorator](utilities/cached_property.py)
+
+## Learning Resources
+### Optimization
++ [An overview of gradient descent optimization algorithms](http://sebastianruder.com/optimizing-gradient-descent/)
++ [Practical Recommendations for Gradient-Based Training of Deep Architectures by Yoshua Bengio](https://arxiv.org/pdf/1206.5533v2.pdf)
