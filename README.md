@@ -12,6 +12,7 @@ Exercises for Machine Learning
 + [Distance](utilities/distance.py)
 + [Cached Property Decorator](utilities/cached_property.py)
 + [Downloader](utilities/maybe_download.py)
++ [Continuous Variable to Categorical Variable](utilities/num_to_range.py)
 
 ## Learning Resources
 ### Optimization
