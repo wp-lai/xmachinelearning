@@ -11,6 +11,7 @@ Exercises for Machine Learning
 + [Argmin](utilities/argmin.py)
 + [Distance](utilities/distance.py)
 + [Cached Property Decorator](utilities/cached_property.py)
++ [Downloader](utilities/maybe_download.py)
 
 ## Learning Resources
 ### Optimization
