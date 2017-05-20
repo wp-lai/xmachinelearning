@@ -4,7 +4,7 @@
 Exercises for Machine Learning
 
 ## Models
-+ [Logistic Regression](logistic_regression/)
++ [Logistic Regression](models/logistic_regression/)
 
 ## Utilities
 + [One Hot Encoding](utilities/onehot.py)
